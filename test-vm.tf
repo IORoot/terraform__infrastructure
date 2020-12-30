@@ -36,9 +36,11 @@ resource "digitalocean_droplet" "www-1" {
     provisioner "remote-exec" {
         inline = [
             "export PATH=$PATH:/usr/bin",
-            # install nginx
-            "sudo apt-get update",
-            "sudo apt-get -y install nginx"
+            # Alias
+            "alias ll=\"ls -la\"",
+            # # install nginx
+            # "sudo apt-get update",
+            # "sudo apt-get -y install nginx",
         ]
     }
 
